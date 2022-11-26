@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Main {
+class BinarySearch {
 	int binarySearch(int array[], int element, int low, int high) {
 		while (low <= high) {
       		int mid = low + (high - low) / 2;
@@ -29,23 +29,23 @@ class Main {
 		}
 	}
 	public static void main(String args[]) {
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter the no. of elements");
-	int n = sc.nextInt();
-	int a[] = new int[n];
-	System.out.println("Enter the elements : ");
-	for(int i = 0; i < n; i++){
-		a[i] = sc.nextInt();
-	}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no. of elements");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter the elements : ");
+		for(int i = 0; i < n; i++){
+			a[i] = sc.nextInt();
+		}
 
-	System.out.println("Enter the element to be searched: ");
-	int x = sc.nextInt();
-	Main obj = new Main();
-	sort(a,a.length);
-    int result = obj.binarySearch(a, x, 0, n - 1);
-    if (result == -1)
-      System.out.println("Not found");
-    else
-      System.out.println("Element found at index " + result);
-  }
+		System.out.println("Enter the element to be searched: ");
+		int x = sc.nextInt();
+		BinarySearch obj = new BinarySearch();
+		sort(a,a.length);
+		int result = obj.binarySearch(a, x, 0, n - 1);
+		if (result == -1)
+			System.out.println("Not found");
+		else
+			System.out.println("Element found at index " + result);
+  	}
 }
